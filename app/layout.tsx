@@ -9,6 +9,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -38,7 +39,13 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Header />
-          {children}
+          <div className="flex min-h-screen">
+            {/* sidebar */}
+            <Sidebar />
+            <div className="flex-1 p-4 bg-blue-50 overflow-y-auto scrollbar-hide">
+              {children}
+            </div>
+          </div>
         </body>
       </html>
     </ClerkProvider>

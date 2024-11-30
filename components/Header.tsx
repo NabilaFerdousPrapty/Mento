@@ -20,8 +20,8 @@ const Header = () => {
           <Image
             src="https://i.ibb.co.com/M7wPSwJ/mento.png"
             alt="Mento"
-            width={80}
-            height={20}
+            width={50}
+            height={10}
           />
         </div>
 
