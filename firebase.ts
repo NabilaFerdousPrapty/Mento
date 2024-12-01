@@ -1,19 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { getApps, initializeApp, getFirestore } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// Firebase configuration using environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyBdWJM_clIye48LjVZ2O6N58405JFVWQTU",
-  authDomain: "mentoaiproductivitytool.firebaseapp.com",
-  projectId: "mentoaiproductivitytool",
-  storageBucket: "mentoaiproductivitytool.firebasestorage.app",
-  messagingSenderId: "911344085584",
-  appId: "1:911344085584:web:de12d54cbcbc64202eff55"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase
 const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApps();
 const db = getFirestore(app);
+
 export { db };
