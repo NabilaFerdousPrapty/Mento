@@ -11,12 +11,18 @@ import {
 } from "@/components/ui/sheet";
 import { IoReorderThree } from "react-icons/io5";
 const Sidebar = () => {
+  const menuOptions = (
+    <>
+      <NewDocumentButton />
+
+      <Button className="w-full" variant="ghost">
+        All Documents
+      </Button>
+    </>
+  );
   return (
     <div className="p-2 md:p-5  bg-gray-100">
-      <div className="hidden md:block">
-        <NewDocumentButton />
-      </div>
-      <div className="mt-5">
+      <div className="mt-2 md:hidden">
         <Sheet>
           <SheetTrigger>
             <IoReorderThree className="text-3xl text-blue-500" />
@@ -24,13 +30,13 @@ const Sidebar = () => {
           <SheetContent>
             <SheetHeader>
               <SheetTitle>Menu</SheetTitle>
-              <SheetDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
-              </SheetDescription>
+              <SheetDescription>{menuOptions}</SheetDescription>
             </SheetHeader>
           </SheetContent>
         </Sheet>
+      </div>
+      <div className="hidden md:inline">
+        <NewDocumentButton />
       </div>
     </div>
   );
