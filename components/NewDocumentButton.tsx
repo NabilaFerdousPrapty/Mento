@@ -14,7 +14,9 @@ import {
 const NewDocumentButton = () => {
   return (
     <div>
-      <Button>New Document</Button>
+      <Button className="bg-slate-900 text-white px-4 py-2">
+        New Document
+      </Button>
     </div>
   );
 };
