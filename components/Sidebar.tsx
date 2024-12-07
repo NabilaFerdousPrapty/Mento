@@ -25,7 +25,7 @@ const Sidebar = () => {
       <div className="mt-2 md:hidden">
         <Sheet>
           <SheetTrigger>
-            <IoReorderThree className="text-3xl text-blue-500" />
+            <IoReorderThree className="text-3xl text-blue-500 bg-slate-100 rounded-2xl" />
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
