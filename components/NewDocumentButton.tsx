@@ -11,6 +11,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { useRouter } from "next/router";
+import { createNewDocument } from "@/actions/actions";
 
 const NewDocumentButton = () => {
   const [ispending,startTransition]=useTransition();
