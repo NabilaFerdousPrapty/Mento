@@ -30,13 +30,13 @@ const Header = () => {
           {/* Greeting for signed-in users */}
           {user && (
             <h1 className="hidden text-gray-950 sm:block text-lg font-medium">
-              Welcome, {user?.firstName}!
+              {user?.firstName}'s workkit
             </h1>
           )}
 
           {/* Sign-In Button (visible when signed out) */}
           <SignedOut>
-            <div className="bg-blue-500 text-white px-4 py-2 rounded-full transition duration-300">
+            <div className="bg-zinc-900 text-white px-4 py-2 rounded-full transition duration-300">
               <SignInButton>Sign In</SignInButton>
             </div>
           </SignedOut>

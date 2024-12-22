@@ -25,6 +25,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Mento",
   description: "All new AI productivity tool",
+ 
 };
 
 export default function RootLayout({

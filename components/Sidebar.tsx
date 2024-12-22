@@ -21,11 +21,11 @@ const Sidebar = () => {
     </>
   );
   return (
-    <div className="p-2 md:p-5  bg-gray-100">
+    <div className="p-2 md:p-5  bg-gray-100 border-2 rounded-lg border-gray-200">
       <div className="mt-2 md:hidden">
         <Sheet>
           <SheetTrigger>
-            <IoReorderThree className="text-3xl text-blue-500 bg-slate-100 rounded-2xl" />
+            <IoReorderThree className="text-3xl text-black bg-slate-100 rounded-2xl" />
           </SheetTrigger>
           <SheetContent>
             <SheetHeader>
