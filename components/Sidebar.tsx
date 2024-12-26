@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { Button } from "./ui/button";
 import NewDocumentButton from "./NewDocumentButton";
 import {
@@ -11,20 +12,20 @@ import {
 } from "@/components/ui/sheet";
 import { IoReorderThree } from "react-icons/io5";
 import { useUser } from "@clerk/nextjs";
-import { useCollection } from 'react-firebase-hooks/firestore';
-import { collectionGroup, query, where } from 'firebase/firestore';
+import { useCollection } from "react-firebase-hooks/firestore";
+import { collectionGroup, query, where } from "firebase/firestore";
 import { db } from "@/firebase";
 const Sidebar = () => {
   const { user } = useUser();
 
   const { data, loading, error } = useCollection(
-    user &&( query(
+    user &&
+      query(
         collectionGroup(db, "rooms"),
         where("userId", "==", user.emailAddresses[0].toString())
       )
-
-    )
   );
+  useEffect(() => {}, [data]);
   const menuOptions = (
     <>
       <NewDocumentButton />
